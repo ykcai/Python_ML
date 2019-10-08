@@ -1,4 +1,4 @@
-# Machine Learning Class Week 4 Homework
+# Machine Learning Class Week 4 Homework Answers
 
 '''
 0. Create a list containing five different sandwich ingredients, such as the following:
@@ -8,8 +8,23 @@ Now create a loop that prints out the list (including the numbers):
 Create the lists using the .append() method
 '''
 # --------------------------------Code between the lines!--------------------------------
+ingredients = []
+ingredients.append('snails')
+ingredients.append('leeches')
+ingredients.append('gorilla belly-button lint')
+ingredients.append('caterpillar eyebrows')
+ingredients.append('centipede toes')
+print(ingredients)
+ingredients2 = ["ham","lettuce","tomatos","sauce","green pepper"]
 
+def print_ingredients(input_list):
+    x = 1
+    for i in ingredients:
+        print('%s %s' % (x, i))
+        x = x + 1
 
+print_ingredients(ingredients)
+print_ingredients(ingredients2)
 # ---------------------------------------------------------------------------------------
 
 
@@ -24,7 +39,14 @@ and at the end of the 15 years?
 Write a program using a for loop that prints your moon weight for each year.
 '''
 # --------------------------------Code between the lines!--------------------------------
+earth_weight = 30
+def weight_on_moon(weight):
+    for year in range(1, 16):
+        weight = weight + 1
+        moon_weight = weight * 0.165
+        print('Year %s is %s' % (year, moon_weight))
 
+weight_on_moon(earth_weight)
 
 # ---------------------------------------------------------------------------------------
 
@@ -40,6 +62,13 @@ Input : n = 3, m = 4
 Output :  12
 '''
 # --------------------------------Code between the lines!--------------------------------
-
-
+def multiplication(n, m):
+    result = 0
+    for i in range(0, m):
+        result = result + n
+    print(result)
+    return result
+    
+multiplication(2,3)
+multiplication(3,4)
 # ---------------------------------------------------------------------------------------
