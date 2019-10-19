@@ -114,26 +114,44 @@ print(list(map(splicer, my_names)))
 def check_even(num):
     return num % 2 == 0
 
+
 nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Here we are filting the nums list by the check_even function, filtering out odd numbers
 print(list(filter(check_even, nums)))
 
 # Lambda Expression: allows us to create "anonymous" functions.The means we can quickly made ad-hoc functions without needing to properly define functions using def.
 
+'''
 def square(num):
     result = num**2
     return result
+
+
 square(2)
 
 # simplify
+
+
 def square(num):
     return num**2
+
+
 square(2)
 
 # one liner
+
+
 def square(num): return num**2
+
+
 square(2)
 
 # lambda way
-square = lambda num: num ** 2
+
+'''
+
+
+def square_lambda(num): return num ** 2
+
+
 square(2)
