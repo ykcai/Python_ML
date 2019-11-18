@@ -66,7 +66,7 @@ print(answer)
 
 # Introduction to Pandas
 # Use pandas for data analysis, basically an extremely powerful version of Excel/Google Sheets just with more features!
-# Series, DataFrames, Missing Data, GroupBy, Merging, joining, and Conatenating, Operations, Data Input and Output
+# Series, DataFrames, Missing Data, GroupBy, Merging, joining, and Concatenating, Operations, Data Input and Output
 
 print("# Series Defintion:\
 \n# Very similar to Numpy array (it is built on top of the Numpy array object). \n# What is different is that series can have axis labels, meaning it can be \n# indexed by a label, instead of just a number location. It also doesn't need to hold numeric data, it can hold any arbitrary Python Object.\n")
