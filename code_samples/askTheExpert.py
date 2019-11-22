@@ -1,10 +1,15 @@
+from tkinter import *
+import os
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+
 the_world = {}
+countires = os.path.join(THIS_FOLDER, 'countries.txt')
 
 # with statement: we don’t have to close the file handler. The with statement creates a context manager and it will automatically close the file handler for you when you are done with it. (Better way)
 
 
 def read_from_file():
-    with open('/Users/michaelcai/Desktop/Personal/Python_ML/code_samples/countries.txt', 'r') as text_file:
+    with open(countires, 'r') as text_file:
         for each_line in text_file:
             each_line = each_line.rstrip('\n')
             country, city = each_line.split('/')
@@ -12,7 +17,7 @@ def read_from_file():
 
 
 def write_to_file(country_name, city_name):
-    with open('/Users/michaelcai/Desktop/Personal/Python_ML/code_samples/countries.txt', 'a') as text_file:
+    with open(countires, 'a') as text_file:
         text_file.write("\n" + country_name + '/' + city_name)
 
 
