@@ -6,7 +6,8 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 # Create the haar cascade
-faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+faceCascade = cv2.CascadeClassifier(
+    "/Users/michaelcai/Desktop/Personal/Python_ML/face-detection/complex/haarcascade_frontalface_default.xml")
 
 while(True):
     # Capture frame-by-frame
