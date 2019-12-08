@@ -1,6 +1,6 @@
 # USAGE
 # python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle \
-#	--detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
+# 	--detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
 
 # import the necessary packages
 from imutils import paths
@@ -51,16 +51,18 @@ total = 0
 # loop over the image paths
 for (i, imagePath) in enumerate(imagePaths):
     # extract the person name from the image path
-    print("[INFO] processing image {}/{}".format(i + 1,
-                                                 len(imagePaths)))
+    print("[INFO] processing image {}/{}".format(i + 1, len(imagePaths)))
     name = imagePath.split(os.path.sep)[-2]
-
+    absolute_path = os.path.join(os.getcwd(), imagePath)
     # load the image, resize it to have a width of 600 pixels (while
     # maintaining the aspect ratio), and then grab the image
     # dimensions
-    image = cv2.imread(imagePath)
+    print(absolute_path)
+    image = cv2.imread(absolute_path)
+    print("IMAGE: ", image)
     image = imutils.resize(image, width=600)
-    (h, w) = image.shape[:2]
+    print(image)
+    (h, w) = image.shape[0:2]
 
     # construct a blob from the image
     imageBlob = cv2.dnn.blobFromImage(

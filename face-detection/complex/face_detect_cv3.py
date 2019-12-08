@@ -9,7 +9,9 @@ cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 # Read the image
+print(imagePath)
 image = cv2.imread(imagePath)
+print(image)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Detect faces in the image
